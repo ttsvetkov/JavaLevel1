@@ -6,9 +6,9 @@ public class HomeWork2 {
     public static void main(String[] args) {
 
         System.out.println(checkSum(6,12));
-        checkNumber(-6);
-        System.out.println(checkNumberBoolean(0));
-        printString("строка длинная", 5);
+        checkNumber(0);
+        System.out.println(checkNumberBoolean(2));
+        printString("строка длинная", 2);
         System.out.println(checkYear(2024));
     }
 
@@ -43,7 +43,7 @@ public class HomeWork2 {
 
         if((a %= 400) == 0){
            return true;
-        } else if (((a %= 100) == 0 && (a %= 400) != 0) || (a %= 400) < 400 && (a %= 4) != 0){
+        } else if ((a %= 100) == 0 || (a %= 400) < 400 && (a %= 4) != 0){
             return false;
         } else if ((a %= 4) == 0) {
             return true;
