@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class Cat {
     private String name;
-    private int appetite = 15;
-    private boolean fullness;
+    private int appetite = 10; // максимально возможный аппетит у котов
+    private boolean fullness;  // голод
 
     public Cat(String name, int appetite, boolean fullness) {
         this.name = name;
@@ -17,13 +17,18 @@ public class Cat {
         this.setAppetite();
         this.fullness = false;
     }
-    public void eat(Plate p) {
-        System.out.println("Кот начал есть!");
-        p.decreaseFood(appetite);
+
+    public void decreaseAppetite(int amount) {
+
+        this.appetite -= amount;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setAppetite(int a){
+        this.appetite = a;
     }
 
     public void setAppetite(){
@@ -35,6 +40,22 @@ public class Cat {
         return random.nextInt(a) + 1;
     }
 
+    public void setFullness(boolean fullness) {
+        this.fullness = fullness;
+    }
+
+    public int getAppetite() {
+        return this.appetite;
+    }
+
+    public boolean getFullness() {
+        return this.fullness;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public void info(){
         System.out.println(this);
     }
@@ -43,6 +64,7 @@ public class Cat {
     public String toString() {
         return this.getClass().getSimpleName() +
                 " по кличке : '" + name + '\'' +
-                ((this.fullness) ? "Наелся!!!" : " голодный и хочет съесть = " + + this.appetite + " сосисок" );
+                ((this.fullness) ? "Накормлен" : " голодный и хочет съесть = " + + this.appetite + " сосисок" );
     }
+
 }
