@@ -45,7 +45,7 @@ public abstract class Animal {
     }
 
     public int getDistRun(int distRun) {
-        return random(this.distRun);
+        return random(distRun);
     }
 
     public int getDistSwim(int distSwim) {

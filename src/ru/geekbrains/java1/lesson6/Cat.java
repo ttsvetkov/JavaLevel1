@@ -12,8 +12,6 @@ public class Cat extends Animal{
 
     public Cat(String name, boolean run, int distRun, boolean swim, int distSwim) {
         super(name, run, distRun, swim, distSwim);
-        this.distRun = RUN_DIST;
-        this.swim = false;
         count++;
     }
     public Cat(String name){

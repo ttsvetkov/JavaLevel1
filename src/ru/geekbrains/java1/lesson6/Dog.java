@@ -12,8 +12,6 @@ public class Dog extends Animal{
 
     public Dog(String name, boolean run, int distRun, boolean swim, int distSwim) {
         super(name, run, distRun, swim, distSwim);
-        this.distRun = RUN_DIST;
-        this.distSwim = SWIM_DIST;
         count++;
     }
 
