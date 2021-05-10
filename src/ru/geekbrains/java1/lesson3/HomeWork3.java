@@ -1,6 +1,5 @@
-package lesson3;
+package ru.geekbrains.java1.lesson3;
 
-import java.lang.invoke.SwitchPoint;
 import java.util.Arrays;
 import java.util.Scanner;
 

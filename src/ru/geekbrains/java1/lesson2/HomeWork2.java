@@ -1,4 +1,4 @@
-package lesson2;
+package ru.geekbrains.java1.lesson2;
 
 @SuppressWarnings({"RedundantIfStatement", "ConstantConditions", "SameParameterValue"})
 public class HomeWork2 {
@@ -9,7 +9,7 @@ public class HomeWork2 {
         checkNumber(0);
         System.out.println(checkNumberBoolean(2));
         printString("строка длинная", 2);
-        System.out.println(checkYear(2024));
+        System.out.println(checkYear(2021));
     }
 
     private static boolean checkSum(int a, int b) {
@@ -45,7 +45,7 @@ public class HomeWork2 {
            return true;
         } else if ((a %= 100) == 0 || (a %= 400) < 400 && (a %= 4) != 0){
             return false;
-        } else if ((a %= 4) == 0) {
+        } else if ((a % 4) == 0) {
             return true;
         } else return false;
 
